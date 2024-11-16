@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import androidx.appcompat.widget.AppCompatButton
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 
 class myAdapter(val context: Context , private val seats: List<SeatData>) : BaseAdapter() {
@@ -26,15 +27,23 @@ class myAdapter(val context: Context , private val seats: List<SeatData>) : Base
         val seatButton = view.findViewById<AppCompatButton>(R.id.eachGrid)
 
         val seat = seats[position]
-        seatButton.isEnabled = seat.isAvailable
-        seatButton.isSelected = seat.isSelected
+//set the num of seat
+        seatButton.text = seat.num
 
-        seatButton.setOnClickListener {
-            if (seat.isAvailable) {
-                seat.isSelected = !seat.isSelected
-                notifyDataSetChanged()  // Update view with new state
-            }
+        val background =  if (seat.isSelected){
+            ContextCompat.getColor(context,R.color.blue)
+
+        }else{
+            ContextCompat.getColor(context,R.color.green)
+
         }
+        seatButton.setBackgroundColor(background)
+
+        seatButton.setOnClickListener(){
+            seat.isSelected = !seat.isSelected
+            notifyDataSetChanged()
+        }
+
 
         return view
     }
