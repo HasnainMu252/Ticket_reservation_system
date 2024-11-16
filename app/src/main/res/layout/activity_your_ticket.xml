@@ -12,11 +12,29 @@
         android:numColumns="5"
         android:horizontalSpacing="8dp"
         android:verticalSpacing="8dp" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="horizontal">
 
     <Button
         android:id="@+id/confirmBookingBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
         android:text="Confirm Booking"
-        android:layout_marginTop="20dp" />
+        />
+    <Button
+        android:id="@+id/checkTicketsBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Check Tickets"
+        android:layout_marginHorizontal="10dp"
+        android:layout_gravity="center"
+       />
+
+</LinearLayout>
+
+
 </LinearLayout>

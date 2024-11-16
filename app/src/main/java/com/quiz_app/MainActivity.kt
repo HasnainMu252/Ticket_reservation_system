@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
 
         }
         CheckTicket.setOnClickListener(){
-            val intent = Intent(this,CheckTicket::class.java)
+            val intent = Intent(this,Check_Ticket::class.java)
 
             startActivity(intent)
 
