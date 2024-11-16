@@ -3,6 +3,8 @@ This my Main Activity for Reservation system
 
 and when user click on the Book the Ticket
 ![image](https://github.com/user-attachments/assets/52bfab16-0ca2-42a1-97e3-67b76f869977)
+UI from the Phone 
+![image](https://github.com/user-attachments/assets/b19ac691-0901-4014-af77-c128bc07f0b8)
 
 
 
